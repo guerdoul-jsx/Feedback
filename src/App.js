@@ -1,8 +1,6 @@
 import './App.css';
 import FeedBackList from './components/FeedBackList';
 import Header from './components/Header';
-import FeedBackData from './data/FeedBackData';
-import { useState } from 'react';
 import FeedBackStats from './components/FeedBackStats';
 import FeedBackFrom from './components/FeedBackFrom';
 import {BrowserRouter as Router , Route , Routes} from 'react-router-dom'
