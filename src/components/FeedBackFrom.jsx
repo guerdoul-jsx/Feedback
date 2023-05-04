@@ -4,6 +4,7 @@ import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
 import FeedBackContext from "./context/FeedBackContext";
 import { useContext } from "react";
+import Input from "./shared/Input/Input";
 
 const FeedBackFrom =() => {
 
@@ -58,7 +59,7 @@ const FeedBackFrom =() => {
                 <h2>How Would you rate your service with us</h2>
                 <RatingSelect select ={(rating) => setRating(rating)} />
                 <div className="input-group">
-                    <input type="text" placeholder="Write a review" value={text}  onChange={handleText} />
+                    <Input inputType='text' placeholder="Write a review" value={text}  onChange={handleText} />
                     <Button className="btn" type="submit" isDisabled = {btnDisabled}>Send</Button>
                 </div>
                 {

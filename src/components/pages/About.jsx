@@ -7,7 +7,7 @@ const About = () => {
             <p>This is an app that allow the user to send their feedback about our products and our services </p>
             <p>version: 1.0.1</p>
             <Link to="/">Back to Home</Link>
-            
+        
         </Card>
     );
 };
