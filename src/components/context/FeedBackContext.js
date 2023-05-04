@@ -19,7 +19,7 @@ export const FeedbackProvider = ({children}) => {
 
     const fetchFeedback = async () => {
         
-        const response = await fetch(`/Feedback?_sort=id&_order=desc`);
+        const response = await fetch(`https://feedback-db.onrender.com/Feedback?_sort=id&_order=desc`);
         const data  = await response.json();
         setfeedBack(data)
         setIsLoading(false);
@@ -32,7 +32,7 @@ export const FeedbackProvider = ({children}) => {
    })
 
    const updateFeedBack = async (id, updtItem) => {
-        const response = await fetch(`/Feedback/${id}` , {
+        const response = await fetch(`https://feedback-db.onrender.com/Feedback/${id}` , {
             method : 'PUT',
             headers : {
                 'Content-Type' : 'application/json'
@@ -52,7 +52,7 @@ export const FeedbackProvider = ({children}) => {
     }
 
     const addFeedBack = async(feedback) => {
-        const response = await fetch(`/Feedback` , {
+        const response = await fetch(`https://feedback-db.onrender.com/Feedback` , {
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'
@@ -72,7 +72,7 @@ export const FeedbackProvider = ({children}) => {
             {
                 label: 'Yes Delete this feedback',
                 onClick: async () => {
-                    await fetch(`/Feedback/${id}`, {
+                    await fetch(`https://feedback-db.onrender.com/Feedback/${id}`, {
                         method: 'DELETE'
                     });
                   setfeedBack(feedBack.filter((itm) => itm.id !== id));
